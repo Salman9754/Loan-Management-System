@@ -1,16 +1,34 @@
-import type { Response, Request } from "express"
+import type { Request, Response, NextFunction } from "express";
 
-export const signUp = (req: Request, res: Response) => {
+export const signUp = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  res.status(200).json({
+    success: true,
+    message: "controllers working",
+  });
+};
 
-    res.send('Sign UP api')
-}
+export const signIn = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  res.status(200).json({
+    success: true,
+    message: "controllers working",
+  });
+};
 
-export const signIn = (req: Request, res: Response) => {
-
-    res.send('Sign In api')
-}
-
-export const signOut = (req: Request, res: Response) => {
-
-    res.send('Sign Out api')
-}
+export const signOut = async (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  res.status(200).json({
+    success: true,
+    message: "controllers working",
+  });
+};
